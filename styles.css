@@ -1,3 +1,4 @@
+/* GLOBAL */
 @font-face {
 	font-family: "pusab";
 	src: url('bit.ttf');
@@ -29,32 +30,43 @@ td {
     padding: 0 2em 0.5em 0;
 }
 
-/* INFO SECTION */
-.info {
+
+/* FIRST PAGE */
+#first-page {
+    display: block;
+}
+#info {
     margin-bottom: 1em;
 }
-.info img.img {
+#info img.img {
     border-radius: 50%;
     border: 3px solid white;
     vertical-align: middle;
     margin-right: 1em;
 }
-.info span.name {
+#info span.name {
     font-size: 1.8em;
 }
-.info span.title {
+#info span.title {
     font-size: 1 em;
 }
-
-/* LINKS SECTION */
-.links td.data {
+#links td.data {
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
-/* PROJECTS SECTION */
-.projects {
+
+/* SECOND PAGE */
+#second-page {
+    display: none;
+}
+
+#projects {
     text-align: center;
-    color: #555;
-    text-shadow: 2px 2px #ddd;
+}
+
+
+/* BUTTON */
+#switch {
+    text-align: center;
 }

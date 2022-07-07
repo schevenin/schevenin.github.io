@@ -2,52 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Rogelio Schevenin</title>
+    <title>Rogelio</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-    <div class="info">
-      <table cellspacing="0" cellpadding="0">
-        <tr>
-          <td><img class="img" src="profile.png"></td>
-          <td>
-            <span class="name">Rogelio Schevenin</span>
-            <br>
-            <span class="title">Computer Science Student</span>
-          </td>
-        </tr>
-      </table>
+    <!-- FIRST PAGE -->
+    <div id="first-page">
+      <div id="info">
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img class="img" src="profile.png"></td>
+            <td>
+              <span class="name">Rogelio Schevenin</span>
+              <br>
+              <span class="title">Computer Science Student</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="links">
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <td>E-Mail</td>
+            <td class="data">rogelio@schevenin.com</td>
+          </tr>
+          <tr>
+            <td>GitHub</td>
+            <td class="data"><a href="https://github.com/schevenin">@schevenin</a></td>
+          </tr>
+          <tr>
+            <td>LinkedIn</td>
+            <td class="data"><a href="https://linkedin.com/in/schevenin">@schevenin</a></td>
+          </tr>
+          <tr>
+            <td>Twitter</td>
+            <td class="data"><a href="https://twitter.com/schevenin">@schevenin</a></td>
+          </tr>
+          <tr>
+            <td>PGP key</td>
+            <td class="data"><a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x768e0dcfbcfa441f">0x768E0DCFBCFA441F</a></td>
+          </tr>
+          <tr>
+            <td>Fingerprint</td>
+            <td class="data">42A0 C0F2 544F B1E7 C13A C2CC 768E 0DCF BCFA 441F</td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <div class="links">
-      <table cellspacing="0" cellpadding="0">
-        <tr>
-          <td>E-Mail</td>
-          <td class="data">rogelio@schevenin.com</td>
-        </tr>
-        <tr>
-          <td>GitHub</td>
-          <td class="data"><a href="https://github.com/schevenin">@schevenin</a></td>
-        </tr>
-        <tr>
-          <td>LinkedIn</td>
-          <td class="data"><a href="https://linkedin.com/in/schevenin">@schevenin</a></td>
-        </tr>
-        <tr>
-          <td>Twitter</td>
-          <td class="data"><a href="https://twitter.com/schevenin">@schevenin</a></td>
-        </tr>
-        <tr>
-          <td>PGP key</td>
-          <td class="data"><a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x768e0dcfbcfa441f">0x768E0DCFBCFA441F</a></td>
-        </tr>
-        <tr>
-          <td>Fingerprint</td>
-          <td class="data">42A0 C0F2 544F B1E7 C13A C2CC 768E 0DCF BCFA 441F</td>
-        </tr>
-      </table>
+    <!-- SECOND PAGE -->
+    <div id="second-page">
+      <div id="projects">
+        <h1>AR Atomic Modeling App</h1>
+        <h1>Linux Homelab</h1>
+        <h1>NGram Frequency Counter</h1>
+        <h1>Anagrams Solver</h1>
+      </div>
     </div>
-    <div class="projects">
-      <h1>more comming soon</h1>
+    <!-- SWITCH PAGES -->
+    <div id="switch">
+        <a onclick="switchPages()" href="#"><h1 id="button">projects</h1></a>
     </div>
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
