@@ -21,7 +21,13 @@ var toggleProjects = function(button)
 
 var toggleProject = function(project)
 {
-	document.getElementById(project).innerHTML = projects[project];
+	let obj = document.getElementById(project);
+	if (obj.innerHTML == '')
+	{
+		obj.innerHTML = projects[project];
+	} else {
+		obj.innerHTML = ''
+	}
 }
 
 var projects = 
