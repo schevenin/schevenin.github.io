@@ -24,11 +24,14 @@ var toggleProject = function(project)
 	let obj = document.getElementById(project);
 	if (obj.innerHTML == '')
 	{
+		for (var key of Object.keys(projects)) {
+    		document.getElementById(key).innerHTML = '';
+		}
 		obj.innerHTML = projects[project];
 	} else {
-		obj.innerHTML = ''
+		obj.innerHTML = '';
 	}
-}
+};
 
 var projects = 
 {
