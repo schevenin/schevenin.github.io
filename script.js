@@ -27,7 +27,6 @@ var toggleProject = function(project)
 		for (var key of Object.keys(projects)) {
     		document.getElementById(key).innerHTML = '';
 		}
-		
 		obj.innerHTML = projects[project];
 	} else {
 		obj.innerHTML = '';
