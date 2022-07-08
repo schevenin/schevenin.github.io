@@ -1,21 +1,33 @@
 console.log('hello world');
 
-function switchPages()
+var toggleProjects = function(button) 
 {
-	first = document.getElementById('first-page');
-	second = document.getElementById('second-page');
-	button = document.getElementById('button');
+	switch(button.innerHTML)
+	{
+		case "projects":
+			button.innerHTML = "back";
+			document.getElementById("intro").style.display = "none";
+			document.getElementById("projects").style.display = "block";
+			break;
+		case "back":
+			button.innerHTML = "projects";
+			document.getElementById("intro").style.display = "block";
+			document.getElementById("projects").style.display = "none";
+			break;
+		default:
+			break;
+	}
+};
 
-	if (button.textContent == 'back')
-	{
-		button.textContent = "projects"
-		document.getElementById('first-page').style.display='block';
-	    document.getElementById('second-page').style.display='none';
-	}
-	else
-	{
-		button.textContent = "back"
-		document.getElementById('first-page').style.display='none';
-	    document.getElementById('second-page').style.display='block';
-	}
+var toggleProject = function(project)
+{
+	document.getElementById(project).innerHTML = projects[project];
 }
+
+var projects = 
+{
+	'magicleap': 'lorem ipsum',
+	'homelab': 'lorem ipsum',
+	'ngrams': 'lorem ipsum',
+	'anagrams': 'lorem ipsum',
+};
