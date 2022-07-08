@@ -1,21 +1,39 @@
 console.log('hello world');
 
-function switchPages()
+var toggleProjects = function(button) 
 {
-	first = document.getElementById('first-page');
-	second = document.getElementById('second-page');
-	button = document.getElementById('button');
-
-	if (button.textContent == 'back')
+	switch(button.innerHTML)
 	{
-		button.textContent = "projects"
-		document.getElementById('first-page').style.display='block';
-	    document.getElementById('second-page').style.display='none';
+		case "projects":
+			button.innerHTML = "back";
+			document.getElementById("intro").style.display = "none";
+			document.getElementById("projects").style.display = "block";
+			break;
+		case "back":
+			button.innerHTML = "projects";
+			document.getElementById("intro").style.display = "block";
+			document.getElementById("projects").style.display = "none";
+			break;
+		default:
+			break;
 	}
-	else
+};
+
+var toggleProject = function(project)
+{
+	let obj = document.getElementById(project);
+	if (obj.innerHTML == '')
 	{
-		button.textContent = "back"
-		document.getElementById('first-page').style.display='none';
-	    document.getElementById('second-page').style.display='block';
+		obj.innerHTML = projects[project];
+	} else {
+		obj.innerHTML = ''
 	}
 }
+
+var projects = 
+{
+	'magicleap': 'lorem ipsum',
+	'homelab': 'lorem ipsum',
+	'ngrams': 'lorem ipsum',
+	'anagrams': 'lorem ipsum',
+};

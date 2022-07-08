@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- FIRST PAGE -->
-    <div id="first-page">
+    <div id="intro">
       <div id="info">
         <table cellspacing="0" cellpadding="0">
           <tr>
@@ -50,19 +50,32 @@
         </table>
       </div>
     </div>
+
     <!-- SECOND PAGE -->
-    <div id="second-page">
-      <div id="projects">
-        <h1>AR Atomic Modeling App</h1>
-        <h1>Linux Homelab</h1>
-        <h1>NGram Frequency Counter</h1>
-        <h1>Anagrams Solver</h1>
+    <div id="projects">
+      <div>
+        <h1><a onclick="toggleProject('magicleap')" href="#">AR Atomic Modeling App</a></h1>
+        <t id="magicleap"></t>
+      </div>
+      <div>
+        <h1><a onclick="toggleProject('homelab')" href="#">Linux Homelab</a></h1>
+        <t id="homelab"></t>
+      </div>
+      <div>
+        <h1><a onclick="toggleProject('ngrams')" href="#">NGram Frequency Counter</a></h1>
+        <t id="ngrams"></t>
+      </div>
+      <div>
+        <h1><a onclick="toggleProject('anagrams')" href="#">Anagrams Solver</a></h1>
+        <t id="anagrams"></t>
       </div>
     </div>
+
     <!-- SWITCH PAGES -->
-    <div id="switch">
-        <a onclick="switchPages()" href="#"><h1 id="button">projects</h1></a>
+    <div id="button">
+        <a onclick="toggleProjects(this)" href="#">projects</a>
     </div>
+
     <!-- SCRIPT -->
     <script type="text/javascript" src="script.js"></script>
   </body>
