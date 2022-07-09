@@ -59,6 +59,7 @@ td {
 }
 #back {
     position: fixed;
+    font-size: 20px;
     left: 25px;
     top: 25px;
 }
