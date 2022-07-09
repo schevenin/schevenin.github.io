@@ -32,23 +32,20 @@ td {
 
 
 /* FIRST PAGE */
-#intro {
+#intro-page {
     display: block;
 }
 #info {
     margin-bottom: 1em;
 }
-#info img.img {
+#info img {
     border-radius: 50%;
     border: 3px solid white;
     vertical-align: middle;
     margin-right: 1em;
 }
-#info span.name {
-    font-size: 1.8em;
-}
-#info span.title {
-    font-size: 1 em;
+#info span {
+    font-size: 2em;
 }
 #links td.data {
     text-transform: uppercase;
@@ -57,14 +54,15 @@ td {
 
 
 /* SECOND PAGE */
-#projects {
+#projects-page {
     display: none;
-    text-align: center;
 }
-
-/* BUTTON */
-#button {
+#back {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+}
+#projects {
     text-align: center;
-    margin-top: 0.5em;
-    font-size: 1.5em;
+    padding: 50px;
 }
