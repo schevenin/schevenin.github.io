@@ -8,15 +8,17 @@
   </head>
   <body>
     <!-- FIRST PAGE -->
-    <div id="intro">
+    <div id="intro-page">
       <div id="info">
         <table cellspacing="0" cellpadding="0">
           <tr>
-            <td><img class="img" src="profile.png"></td>
+            <td><img src="profile.png"></td>
             <td>
-              <span class="name">Rogelio Schevenin</span>
+              <span>Rogelio Schevenin</span>
               <br>
-              <span class="title">Computer Science Student</span>
+              <t>Computer Science Student</t>
+              <br>
+              <a onclick="toggleProjects(this)" href="#">Making...</a>
             </td>
           </tr>
         </table>
@@ -52,29 +54,28 @@
     </div>
 
     <!-- SECOND PAGE -->
-    <div id="projects">
-      <div>
-        <h1><a onclick="toggleProject('magicleap')" href="#">AR Atomic Modeling App</a></h1>
-        <t id="magicleap"></t>
-      </div>
-      <div>
-        <h1><a onclick="toggleProject('homelab')" href="#">Linux Homelab</a></h1>
-        <t id="homelab"></t>
-      </div>
-      <div>
-        <h1><a onclick="toggleProject('ngrams')" href="#">NGram Frequency Counter</a></h1>
-        <t id="ngrams"></t>
-      </div>
-      <div>
-        <h1><a onclick="toggleProject('anagrams')" href="#">Anagrams Solver</a></h1>
-        <t id="anagrams"></t>
+    <div id="projects-page">
+      <a id="back" onclick="toggleProjects(this)" href="#">< back</a>
+      <div id="projects" class="data">
+        <div>
+          <h1><a onclick="toggleProject('magicleap')" href="#">AR Atomic Modeling App</a></h1>
+          <t id="magicleap" class="data"></t>
+        </div>
+        <div>
+          <h1><a onclick="toggleProject('homelab')" href="#">Linux Homelab</a></h1>
+          <t id="homelab" class="data"></t>
+        </div>
+        <div>
+          <h1><a onclick="toggleProject('ngrams')" href="#">NGram Frequency Counter</a></h1>
+          <t id="ngrams" class="data"></t>
+        </div>
+        <div>
+          <h1><a onclick="toggleProject('anagrams')" href="#">Anagrams Solver</a></h1>
+          <t id="anagrams" class="data"></t>
+        </div>
       </div>
     </div>
-
-    <!-- SWITCH PAGES -->
-    <div id="button">
-        <a onclick="toggleProjects(this)" href="#">projects</a>
-    </div>
+    
 
     <!-- SCRIPT -->
     <script type="text/javascript" src="script.js"></script>
