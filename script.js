@@ -1,17 +1,17 @@
 console.log('hello world');
 
-let index = true;
+let home = true;
 var toggleProjects = function(button) 
 {
-	if (index)
+	if (home)
 	{	
 		document.getElementById("intro-page").style.display = "none";
 		document.getElementById("projects-page").style.display = "block";
-		index = false;
+		home = false;
 	} else {
 		document.getElementById("intro-page").style.display = "block";
 		document.getElementById("projects-page").style.display = "none";
-		index = true;
+		home = true;
 	}
 };
 
