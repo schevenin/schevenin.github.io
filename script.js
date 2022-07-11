@@ -31,8 +31,8 @@ var toggleProject = function(project)
 
 var projects = 
 {
-	'magicleap': 'lorem ipsum',
-	'homelab': 'lorem ipsum',
-	'ngrams': 'lorem ipsum',
-	'anagrams': 'lorem ipsum',
+	'magicleap': 'an exciting modeling app made for the magic leap headset built in C#',
+	'homelab': 'an ubuntu machine set up as a zfs storage server. Also hosts web servers and software tools like jupyter notebook using docker',
+	'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
+	'anagrams': 'easy solution to your anagram!',
 };
