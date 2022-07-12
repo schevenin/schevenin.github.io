@@ -4,7 +4,7 @@ let home = true;
 var toggleProjects = function(button) 
 {
 	if (home)
-	{	
+	{
 		document.getElementById("intro-page").style.display = "none";
 		document.getElementById("projects-page").style.display = "block";
 		home = false;
