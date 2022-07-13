@@ -68,6 +68,7 @@ td {
     width: 750px;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 800px) {
     td:not(#about), #links {
         display: none;

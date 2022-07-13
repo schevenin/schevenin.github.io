@@ -1,31 +1,50 @@
 console.log('hello world');
 
-let home = true;
-var toggleProjects = function(button) 
+var togglePages = function(button) 
 {
-	if (home)
+	if (document.getElementById("intro-page").style.display != "none")
 	{
 		document.getElementById("intro-page").style.display = "none";
 		document.getElementById("projects-page").style.display = "block";
-		home = false;
 	} else {
 		document.getElementById("intro-page").style.display = "block";
 		document.getElementById("projects-page").style.display = "none";
-		home = true;
+		collapse();
 	}
 };
 
 var toggleProject = function(project)
 {
-	let obj = document.getElementById(project);
-	if (obj.innerHTML == '')
+	if (document.getElementById(project).innerHTML == '')
+	{
+		collapse();
+		expand(project);
+	} else {
+		collapse(project);
+	}
+};
+
+var collapse = function(project = null)
+{
+	if (project == null)
 	{
 		for (var key of Object.keys(projects)) {
     		document.getElementById(key).innerHTML = '';
 		}
-		obj.innerHTML = projects[project];
 	} else {
-		obj.innerHTML = '';
+		document.getElementById(project).innerHTML = '';
+	}
+};
+
+var expand = function(project = null)
+{
+	if (project == null)
+	{
+		for (var key of Object.keys(projects)) {
+    		document.getElementById(key).innerHTML = projects[key];
+		}
+	} else {
+		document.getElementById(project).innerHTML = projects[project];
 	}
 };
 
