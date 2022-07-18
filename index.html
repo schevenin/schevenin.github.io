@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
+    <p id="dir"><a id="home" onclick="togglePages(this)" href="#">~</a>/</p>
     <!-- FIRST PAGE -->
     <div id="intro-page">
       <div id="info">
@@ -19,7 +20,7 @@
               <br>
               <t>Computer Science Student</t>
               <br>
-              <a onclick="togglePages(this)" href="#">Making...</a>
+              <a id="making" onclick="togglePages(this)" href="#">Making...</a>
             </td>
           </tr>
         </table>
@@ -55,21 +56,20 @@
     </div>
     <!-- SECOND PAGE -->
     <div id="projects-page">
-      <a id="back" onclick="togglePages(this)" href="#">< back</a>
       <div id="projects">
-        <div id="magicleap" onclick="toggleProject(this)">
+        <div id="magicleap" onclick="openProject(this)">
           <h1><a href="#">AR Atomic Modeling App</a></h1>
           <p></p>
         </div>
-        <div id="homelab" onclick="toggleProject(this)">
+        <div id="homelab" onclick="openProject(this)">
           <h1><a href="#">Linux Homelab</a></h1>
           <p></p>
         </div>
-        <div id="ngrams" onclick="toggleProject(this)">
+        <div id="ngrams" onclick="openProject(this)">
           <h1><a href="#">NGram Frequency Counter</a></h1>
           <p></p>
         </div>
-        <div id="anagrams" onclick="toggleProject(this)">
+        <div id="anagrams" onclick="openProject(this)">
           <h1><a href="#">Anagrams Solver</a></h1>
           <p></p>
         </div>

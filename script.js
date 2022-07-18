@@ -2,17 +2,39 @@ console.log('hello world');
 
 var togglePages = function(button) 
 {
-	if (document.getElementById("intro-page").style.display != "none")
+	switch (button.id)
 	{
-		document.getElementById("intro-page").style.display = "none";
-		document.getElementById("projects-page").style.display = "block";
-	} else {
-		document.getElementById("intro-page").style.display = "block";
-		document.getElementById("projects-page").style.display = "none";
+		case "making":
+			document.getElementById("intro-page").style.display = "none";
+			document.getElementById("projects-page").style.display = "block";
+			document.getElementById("dir").innerHTML += '<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
+			break;
+		case 'home':
+			document.getElementById("intro-page").style.display = "block";
+			document.getElementById("projects-page").style.display = "none";
+			document.getElementById("dir").innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/';
+			break;
+		case 'projects':
+			
+			document.getElementById("intro-page").style.display = "none";
+			document.getElementById("projects-page").style.display = "block";
+			document.getElementById("dir").innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
+			break;
+		default:
+			// if project clicked on, do nothing
+			return;
+	}
+
+	// show all projects, hide their details
+	for (var projectID of Object.keys(projects))
+	{
+		project = document.getElementById(projectID);
+		project.style.display = 'block';
+		project.querySelector('p').innerHTML = '';
 	}
 };
 
-var toggleProject = function(project)
+var openProject = function(project)
 {
 	// open project
 	if (project.querySelector('p').innerHTML == '')
@@ -25,18 +47,9 @@ var toggleProject = function(project)
 
 		// show project details
 		project.querySelector('p').innerHTML = projects[project.id];
-	}
-	// close project
-	else
-	{
-		// hide project details
-		project.querySelector('p').innerHTML = '';
-		
-		// show other projects
-		for (var projectID of Object.keys(projects))
-		{
-			document.getElementById(projectID).style.display = 'block';
-		}
+
+		// append to dir button
+		document.getElementById("dir").innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
 	}
 };
 

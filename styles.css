@@ -32,6 +32,13 @@ td {
     padding: 0 2em 0.5em 0;
 }
 
+#dir {
+    position: fixed;
+    font-size: 25px;
+    left: 25px;
+    top: 25px;
+}
+
 /* FIRST PAGE */
 #intro-page {
     display: block;
@@ -56,12 +63,6 @@ td {
 /* SECOND PAGE */
 #projects-page {
     display: none;
-}
-#back {
-    position: fixed;
-    font-size: 25px;
-    left: 25px;
-    top: 25px;
 }
 #projects {
     text-align: center;
