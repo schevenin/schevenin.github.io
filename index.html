@@ -53,30 +53,28 @@
         </table>
       </div>
     </div>
-
     <!-- SECOND PAGE -->
     <div id="projects-page">
       <a id="back" onclick="togglePages(this)" href="#">< back</a>
-      <div id="projects" class="data">
-        <div>
-          <h1><a onclick="toggleProject('magicleap')" href="#">AR Atomic Modeling App</a></h1>
-          <t id="magicleap" class="data"></t>
+      <div id="projects">
+        <div id="magicleap" onclick="toggleProject(this)">
+          <h1><a href="#">AR Atomic Modeling App</a></h1>
+          <p></p>
         </div>
-        <div>
-          <h1><a onclick="toggleProject('homelab')" href="#">Linux Homelab</a></h1>
-          <t id="homelab" class="data"></t>
+        <div id="homelab" onclick="toggleProject(this)">
+          <h1><a href="#">Linux Homelab</a></h1>
+          <p></p>
         </div>
-        <div>
-          <h1><a onclick="toggleProject('ngrams')" href="#">NGram Frequency Counter</a></h1>
-          <t id="ngrams" class="data"></t>
+        <div id="ngrams" onclick="toggleProject(this)">
+          <h1><a href="#">NGram Frequency Counter</a></h1>
+          <p></p>
         </div>
-        <div>
-          <h1><a onclick="toggleProject('anagrams')" href="#">Anagrams Solver</a></h1>
-          <t id="anagrams" class="data"></t>
+        <div id="anagrams" onclick="toggleProject(this)">
+          <h1><a href="#">Anagrams Solver</a></h1>
+          <p></p>
         </div>
       </div>
     </div>
-    
     <!-- SCRIPT -->
     <script type="text/javascript" src="script.js"></script>
   </body>

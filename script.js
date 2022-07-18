@@ -9,42 +9,34 @@ var togglePages = function(button)
 	} else {
 		document.getElementById("intro-page").style.display = "block";
 		document.getElementById("projects-page").style.display = "none";
-		collapse();
 	}
 };
 
 var toggleProject = function(project)
 {
-	if (document.getElementById(project).innerHTML == '')
+	// open project
+	if (project.querySelector('p').innerHTML == '')
 	{
-		collapse();
-		expand(project);
-	} else {
-		collapse(project);
-	}
-};
-
-var collapse = function(project = null)
-{
-	if (project == null)
-	{
-		for (var key of Object.keys(projects)) {
-    		document.getElementById(key).innerHTML = '';
+		// hide other projects
+		for (var projectID of Object.keys(projects))
+		{
+			if (projectID != project.id) document.getElementById(projectID).style.display = 'none';
 		}
-	} else {
-		document.getElementById(project).innerHTML = '';
-	}
-};
 
-var expand = function(project = null)
-{
-	if (project == null)
+		// show project details
+		project.querySelector('p').innerHTML = projects[project.id];
+	}
+	// close project
+	else
 	{
-		for (var key of Object.keys(projects)) {
-    		document.getElementById(key).innerHTML = projects[key];
+		// hide project details
+		project.querySelector('p').innerHTML = '';
+		
+		// show other projects
+		for (var projectID of Object.keys(projects))
+		{
+			document.getElementById(projectID).style.display = 'block';
 		}
-	} else {
-		document.getElementById(project).innerHTML = projects[project];
 	}
 };
 
