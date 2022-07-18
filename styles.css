@@ -74,9 +74,6 @@ td {
     td:not(#about), #links {
         display: none;
     }
-    td {
-        padding: 10px 0px 10px 0px;
-    }
     #about {
         text-align: center;
     }
@@ -87,5 +84,14 @@ td {
     }
     #projects {
         width: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    #dir {
+        font-size: 1em;
+    }
+    #projects h1 {
+        font-size: 1.8em;
     }
 }
