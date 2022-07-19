@@ -34,7 +34,7 @@ td {
 
 #dir {
     position: fixed;
-    font-size: 25px;
+    font-size: 1em;
     left: 25px;
     top: 25px;
 }
