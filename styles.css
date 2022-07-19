@@ -10,7 +10,7 @@ html {
     display: table;
     margin: auto;
     font-family: pusab;
-    font-size: 22px;
+    font-size: 18px;
     text-shadow: 2px 2px #555;
     color: #fff;
     background: #222;
@@ -35,7 +35,6 @@ td {
 /* DIRECTORY NAV */
 #dir {
     position: fixed;
-    font-size: 1em;
     left: 15px;
     top: 15px;
 }
@@ -43,6 +42,8 @@ td {
 /* INTRO PAGE */
 #intro-page {
     display: block;
+    padding: 0;
+    margin: 0;
 }
 #info {
     margin-bottom: 1em;
@@ -50,9 +51,7 @@ td {
 #info img {
     border-radius: 50%;
     border: 3px solid white;
-    vertical-align: middle;
-    margin-right: 1.5em;
-    width: 180px
+    margin-right: 2em;
 }
 #info span {
     font-size: 2em;
@@ -64,26 +63,26 @@ td {
 
 /* PROJECTS PAGE */
 #projects-page {
+    display: none;
     padding: 0;
     margin: 0;
-    display: none;
-    text-align: center;
 }
 #projects-container {
-    width: 900px;
+    text-align: center;
 }
 
 /* PROJECT DETAILS */
+/* TODO: figure out an optimal way to format this content */
 #diagram {
-    width: 700px;
+    width: 75%;
     background-color: white;
     border: 10px solid white;
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* INTRO PAGE */
@@ -91,32 +90,14 @@ td {
         display: none;
     }
     #about {
+        margin: 0;
+        padding: 0;
         text-align: center;
     }
-    td#about {
-        padding: 0;
-    }
-
-    /* PROJECTS PAGE */
-    #projects {
-        width: 650px;
-    }
-    #diagram {
-        width: 600px;
-    }
-    
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
     html {
-        font-size:18px;
-    }
-
-    /* PROJECTS PAGE */
-    #projects-container {
-        width: 400px;
-    }
-    #diagram {
-        width: 350px;
+        font-size: 16px;
     }
 }
