@@ -69,7 +69,7 @@ td {
     display: none;
     text-align: center;
 }
-#projects {
+#projects-container {
     width: 900px;
 }
 
@@ -113,7 +113,7 @@ td {
     }
 
     /* PROJECTS PAGE */
-    #projects {
+    #projects-container {
         width: 400px;
     }
     #diagram {

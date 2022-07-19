@@ -26,8 +26,14 @@ var togglePages = function(button)
 	}
 
 	// show all projects, hide their details
+	projects_container = document.getElementById('projects-container');
 	for (var projectID of Object.keys(projects))
 	{
+		if (!document.getElementById(projectID))
+		{
+			projects_container.innerHTML += '<div id="' + projectID + '" onclick="openProject(this)"><h1><a href="#">' + projectID + '</a></h1><p></p></div'
+		}
+
 		project = document.getElementById(projectID);
 		project.style.display = 'block';
 		project.querySelector('p').innerHTML = '';
@@ -55,8 +61,8 @@ var openProject = function(project)
 
 var projects = 
 {
-	'magicleap': 'an exciting modeling app made for the magic leap headset built in C#',
-	'homelab': '<img id="diagram" src="homelab.svg"><br><p>an ubuntu machine set up as a zfs storage server. Also hosts websites and tools like jupyter notebook using docker</p>',
-	'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
-	'anagrams': 'easy solution to your anagram!',
+	'magicleap': 'a modeling app made for the magic leap headset built in C#',
+	'homelab': '<img id="diagram" src="homelab.svg"><br><p>My all-in-one solution to NAS, and a remote development environment.</p>',
+	//'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
+	//'anagrams': 'easy solution to your difficult anagram!',
 };
