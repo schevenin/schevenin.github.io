@@ -31,7 +31,6 @@ var togglePages = function(button)
 		project = document.getElementById(projectID);
 		project.style.display = 'block';
 		project.querySelector('p').innerHTML = '';
-		project.querySelector('h1').style.display = 'block';
 	}
 };
 
@@ -46,9 +45,8 @@ var openProject = function(project)
 			if (projectID != project.id) document.getElementById(projectID).style.display = 'none';
 		}
 
-		// show project details and hide title
+		// show project details
 		project.querySelector('p').innerHTML = projects[project.id];
-		project.querySelector('h1').style.display = 'none';
 
 		// append to dir button
 		document.getElementById("dir").innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
@@ -57,8 +55,8 @@ var openProject = function(project)
 
 var projects = 
 {
-	'magicleap': '<br><br>an exciting modeling app made for the magic leap headset built in C#',
-	'homelab': '<br><br><img width="700" src="homelab.svg"><br><p>an ubuntu machine set up as a zfs storage server. Also hosts web servers and software tools like jupyter notebook using docker</p>',
-	'ngrams': '<br><br>a natural language processing tool that counts the frequency of n-grams in a text file',
-	'anagrams': '<br><br>easy solution to your anagram!',
+	'magicleap': 'an exciting modeling app made for the magic leap headset built in C#',
+	'homelab': '<img id="diagram" src="homelab.svg"><br><p>an ubuntu machine set up as a zfs storage server. Also hosts websites and tools like jupyter notebook using docker</p>',
+	'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
+	'anagrams': 'easy solution to your anagram!',
 };

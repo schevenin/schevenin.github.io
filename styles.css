@@ -10,7 +10,7 @@ html {
     display: table;
     margin: auto;
     font-family: pusab;
-    font-size: 16px;
+    font-size: 22px;
     text-shadow: 2px 2px #555;
     color: #fff;
     background: #222;
@@ -18,7 +18,7 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
-    padding: 1.5em;
+    padding: 50px;
 }
 a {
     color: #20B2AA;
@@ -32,14 +32,15 @@ td {
     padding: 0 2em 0.5em 0;
 }
 
+/* DIRECTORY NAV */
 #dir {
     position: fixed;
     font-size: 1em;
-    left: 25px;
-    top: 25px;
+    left: 15px;
+    top: 5px;
 }
 
-/* FIRST PAGE */
+/* INTRO PAGE */
 #intro-page {
     display: block;
 }
@@ -50,7 +51,8 @@ td {
     border-radius: 50%;
     border: 3px solid white;
     vertical-align: middle;
-    margin-right: 1em;
+    margin-right: 1.5em;
+    width: 180px
 }
 #info span {
     font-size: 2em;
@@ -60,38 +62,61 @@ td {
     letter-spacing: 0.05em;
 }
 
-/* SECOND PAGE */
+/* PROJECTS PAGE */
 #projects-page {
+    padding: 0;
+    margin: 0;
     display: none;
+    text-align: center;
 }
 #projects {
-    text-align: center;
-    width: 750px;
+    width: 900px;
+}
+
+/* PROJECT DETAILS */
+#diagram {
+    width: 700px;
+    background-color: white;
+    border: 10px solid white;
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+    html {
+        font-size: 20px;
+    }
+
+    /* INTRO PAGE */
     td:not(#about), #links {
         display: none;
     }
     #about {
         text-align: center;
     }
-    #projects-page {
+    td#about {
         padding: 0;
-        margin: 0;
-        text-align: center;
     }
+
+    /* PROJECTS PAGE */
     #projects {
-        width: auto;
+        width: 650px;
     }
+    #diagram {
+        width: 600px;
+    }
+    
 }
 
-@media (max-width: 500px) {
-    #dir {
-        font-size: 1em;
+@media (max-width: 600px) {
+    html {
+        font-size:18px;
     }
-    #projects h1 {
-        font-size: 1.8em;
+
+    /* PROJECTS PAGE */
+    #projects {
+        width: 400px;
+    }
+    #diagram {
+        width: 350px;
     }
 }
