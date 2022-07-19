@@ -1,40 +1,50 @@
 console.log('hello world');
 
+const directory_button = document.getElementById('dir');
+const intro_page = document.getElementById('intro-page');
+const projects_page = document.getElementById('projects-page');
+const projects_container = document.getElementById('projects-container');
+
+const projects = 
+{
+	'magicleap': 'a modeling app made for the magic leap headset built in C#',
+	'homelab': '<img id="diagram" src="homelab.svg"><br><p>My all-in-one solution to NAS, and a remote development environment.</p>',
+	'anagrams': 'easy solution to your difficult anagram!',
+	//'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
+	//'add more': 'projects to the page as simple as adding another entry!',
+};
+
 var togglePages = function(button) 
 {
 	switch (button.id)
 	{
-		case "making":
-			document.getElementById("intro-page").style.display = "none";
-			document.getElementById("projects-page").style.display = "block";
-			document.getElementById("dir").innerHTML += '<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
-			break;
 		case 'home':
-			document.getElementById("intro-page").style.display = "block";
-			document.getElementById("projects-page").style.display = "none";
-			document.getElementById("dir").innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/';
+			intro_page.style.display = 'block';
+			projects_page.style.display = 'none';
+			directory_button.innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/';
 			break;
+		case 'making':
 		case 'projects':
-			
-			document.getElementById("intro-page").style.display = "none";
-			document.getElementById("projects-page").style.display = "block";
-			document.getElementById("dir").innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
+			intro_page.style.display = 'none';
+			projects_page.style.display = 'block';
+			directory_button.innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
 			break;
 		default:
 			// if project clicked on, do nothing
 			return;
 	}
 
-	// show all projects, hide their details
-	projects_container = document.getElementById('projects-container');
-	for (var projectID of Object.keys(projects))
+	// list projects, hide their details
+	for (let projectID of Object.keys(projects))
 	{
+		// if project hasn't been added to container yet, add it
 		if (!document.getElementById(projectID))
 		{
 			projects_container.innerHTML += '<div id="' + projectID + '" onclick="openProject(this)"><h1><a href="#">' + projectID + '</a></h1><p></p></div'
 		}
 
-		project = document.getElementById(projectID);
+		// display name, hide details
+		let project = document.getElementById(projectID);
 		project.style.display = 'block';
 		project.querySelector('p').innerHTML = '';
 	}
@@ -46,7 +56,7 @@ var openProject = function(project)
 	if (project.querySelector('p').innerHTML == '')
 	{
 		// hide other projects
-		for (var projectID of Object.keys(projects))
+		for (let projectID of Object.keys(projects))
 		{
 			if (projectID != project.id) document.getElementById(projectID).style.display = 'none';
 		}
@@ -55,14 +65,9 @@ var openProject = function(project)
 		project.querySelector('p').innerHTML = projects[project.id];
 
 		// append to dir button
-		document.getElementById("dir").innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
+		document.getElementById('dir').innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
 	}
 };
 
-var projects = 
-{
-	'magicleap': 'a modeling app made for the magic leap headset built in C#',
-	'homelab': '<img id="diagram" src="homelab.svg"><br><p>My all-in-one solution to NAS, and a remote development environment.</p>',
-	//'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
-	//'anagrams': 'easy solution to your difficult anagram!',
-};
+
+
