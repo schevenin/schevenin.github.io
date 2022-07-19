@@ -4,9 +4,11 @@ const directory_button = document.getElementById('dir');
 const intro_page = document.getElementById('intro-page');
 const projects_page = document.getElementById('projects-page');
 const projects_container = document.getElementById('projects-container');
+const website_title = document.querySelector('title');
 
 const projects = 
 {
+	'wip': 'this is a work in progress!',
 	'magicleap': 'a modeling app made for the magic leap headset built in C#',
 	'homelab': '<img id="diagram" src="homelab.svg"><br><p>My all-in-one solution to NAS, and a remote development environment.</p>',
 	'anagrams': 'easy solution to your difficult anagram!',
@@ -22,12 +24,14 @@ var togglePages = function(button)
 			intro_page.style.display = 'block';
 			projects_page.style.display = 'none';
 			directory_button.innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/';
+			website_title.innerHTML = '~/'
 			break;
 		case 'making':
 		case 'projects':
 			intro_page.style.display = 'none';
 			projects_page.style.display = 'block';
 			directory_button.innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
+			website_title.innerHTML = '../projects/'
 			break;
 		default:
 			// if project clicked on, do nothing
@@ -66,8 +70,6 @@ var openProject = function(project)
 
 		// append to dir button
 		document.getElementById('dir').innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
+		website_title.innerHTML = '../' + project.id + '/';
 	}
 };
-
-
-
