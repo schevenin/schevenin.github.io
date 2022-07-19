@@ -10,7 +10,7 @@ const projects =
 {
 	'wip': 'this is a work in progress!',
 	'magicleap': 'a modeling app made for the magic leap headset built in C#',
-	'homelab': '<img id="diagram" src="homelab.svg"><br><p>My all-in-one solution to NAS, and a remote development environment.</p>',
+	'homelab': 'my all-in-one solution to NAS, and a remote development environment.',
 	'anagrams': 'easy solution to your difficult anagram!',
 	//'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
 	//'add more': 'projects to the page as simple as adding another entry!',
