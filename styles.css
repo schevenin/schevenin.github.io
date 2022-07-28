@@ -1,11 +1,13 @@
 /* GLOBAL */
 @font-face {
-	font-family: "pusab";
+    font-family: "pusab";
 	src: url('bit.ttf');
 }
+
 html {
     font-family: pusab;
     font-size: 18px;
+    font-weight: bold;
     text-shadow: 2px 2px #555;
     color: #fff;
     background: #222;
