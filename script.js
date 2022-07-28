@@ -73,6 +73,7 @@ var togglePages = function(button)
 				// display name, hide details
 				let project = document.getElementById(projectID);
 				project.style.display = 'block';
+				project.style.pointerEvents = 'auto';
 				project.querySelector('p').innerHTML = '';
 			}
 
@@ -89,12 +90,15 @@ var togglePages = function(button)
 				for (let projectID of Object.keys(projects))
 				{
 					if (projectID != project.id) document.getElementById(projectID).style.display = 'none';
+						
 				}
 				
 				// hide project title
 				project.querySelector('h1').style.display = 'none';
 				// show project details
 				project.querySelector('p').innerHTML = projects[project.id];
+				// disable clickability
+				project.style.pointerEvents = 'none';
 
 				// append to dir button
 				directory_button.innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
