@@ -111,9 +111,13 @@ td {
     html {
         font-size: 14px;
     }
+
+    /* DIRECTORY NAV */
     #nav {
         display: none;
     }
+
+    /* INTRO PAGE */
     #intro-page {
         text-align: center;
         width: 250px;
