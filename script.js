@@ -1,6 +1,6 @@
 console.log('hello world');
 
-const directory_button = document.getElementById('dir');
+const directory_button = document.getElementById('path');
 const intro_page = document.getElementById('intro-page');
 const projects_page = document.getElementById('projects-page');
 const projects_container = document.getElementById('projects-container');
@@ -15,6 +15,9 @@ const projects =
 	//'ngrams': 'a natural language processing tool that counts the frequency of n-grams in a text file',
 	//'add more': 'projects to the page as simple as adding another entry!',
 };
+
+var last_page = [] // stack that is appended to after clicking on new link
+var next_page = [] // stack that is appended to with last page after clicking back
 
 var togglePages = function(button) 
 {
@@ -32,6 +35,10 @@ var togglePages = function(button)
 			projects_page.style.display = 'block';
 			directory_button.innerHTML = '<a id="home" onclick="togglePages(this)" href="#">~</a>/<a id="projects" onclick="togglePages(this)" href="#">projects</a>/';
 			website_title.innerHTML = '../projects/'
+			break;
+		case 'forward':
+			break;
+		case 'back':
 			break;
 		default:
 			// if project clicked on, do nothing
@@ -69,7 +76,7 @@ var openProject = function(project)
 		project.querySelector('p').innerHTML = projects[project.id];
 
 		// append to dir button
-		document.getElementById('dir').innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
+		directory_button.innerHTML += '<a onclick="togglePages(this)" href="#">' + project.id + '</a>/';
 		website_title.innerHTML = '../' + project.id + '/';
 	}
 };

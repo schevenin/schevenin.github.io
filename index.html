@@ -9,57 +9,68 @@
   </head>
   <body>
     <!-- DIRECTORY NAVIGATION -->
-    <div id="dir"><a id="home" onclick="togglePages(this)" href="#">~</a>/</div>
-    
-    <!-- FIRST PAGE -->
-    <div id="intro-page">
-      <div id="info">
-        <table>
-          <tr>
-            <td><img src="profile.png"></td>
-            <td id="about">
-              <span>Rogelio Schevenin</span>
-              <br>
-              <t>4th-year CS Student</t>
-              <br>
-              <a id="making" onclick="togglePages(this)" href="#">Making...</a>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div id="links">
-        <table>
-          <tr>
-            <td>E-Mail</td>
-            <td class="data">rogelio@schevenin.com</td>
-          </tr>
-          <tr>
-            <td>GitHub</td>
-            <td class="data"><a href="https://github.com/schevenin">@schevenin</a></td>
-          </tr>
-          <tr>
-            <td>LinkedIn</td>
-            <td class="data"><a href="https://linkedin.com/in/schevenin">@schevenin</a></td>
-          </tr>
-          <tr>
-            <td>Twitter</td>
-            <td class="data"><a href="https://twitter.com/schevenin">@schevenin</a></td>
-          </tr>
-          <tr>
-            <td>PGP key</td>
-            <td class="data"><a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x768e0dcfbcfa441f">0x768E0DCFBCFA441F</a></td>
-          </tr>
-          <tr>
-            <td>Fingerprint</td>
-            <td class="data">42A0 C0F2 544F B1E7 C13A C2CC 768E 0DCF BCFA 441F</td>
-          </tr>
-        </table>
-      </div>
+    <div id="nav">
+      <a id="back" onclick="togglePages(this)" href="#"><</a> 
+      <a id="forward" onclick="togglePages(this)" href="#">></a> 
     </div>
     
-    <!-- SECOND PAGE -->
-    <div id="projects-page">
-      <div id="projects-container">
+    <div id="path">
+      <a id="home" onclick="togglePages(this)" href="#">~</a>/
+    </div>
+    
+    <!-- PAGES -->
+    <div id="pages">
+
+      <!-- INTRO PAGE -->
+      <div id="intro-page">
+        <div id="info">
+          <table>
+            <tr>
+              <td><img src="profile.png"></td>
+              <td id="about">
+                <span>Rogelio Schevenin</span>
+                <br>
+                <t>4th-year CS Student</t>
+                <br>
+                <a id="making" onclick="togglePages(this)" href="#">Making...</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="links">
+          <table>
+            <tr>
+              <td>E-Mail</td>
+              <td class="data">rogelio@schevenin.com</td>
+            </tr>
+            <tr>
+              <td>GitHub</td>
+              <td class="data"><a href="https://github.com/schevenin">@schevenin</a></td>
+            </tr>
+            <tr>
+              <td>LinkedIn</td>
+              <td class="data"><a href="https://linkedin.com/in/schevenin">@schevenin</a></td>
+            </tr>
+            <tr>
+              <td>Twitter</td>
+              <td class="data"><a href="https://twitter.com/schevenin">@schevenin</a></td>
+            </tr>
+            <tr>
+              <td>PGP key</td>
+              <td class="data"><a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x768e0dcfbcfa441f">0x768E0DCFBCFA441F</a></td>
+            </tr>
+            <tr>
+              <td>Fingerprint</td>
+              <td class="data">42A0 C0F2 544F B1E7 C13A C2CC 768E 0DCF BCFA 441F</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <!-- PROJECTS PAGE -->
+      <div id="projects-page">
+        <div id="projects-container">
+        </div>
       </div>
     </div>
     
