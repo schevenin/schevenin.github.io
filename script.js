@@ -72,6 +72,7 @@ var togglePages = function(button)
 				let project = document.getElementById(projectID);
 				project.style.display = 'block'; // restore its visibility
 				project.style.pointerEvents = 'auto'; // restore its clickability
+				project.querySelector('h1').style.display = 'block';
 				project.querySelector('p').innerHTML = ''; // hide its details
 			}
 			break;
