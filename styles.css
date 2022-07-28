@@ -38,6 +38,7 @@ td {
 }
 #forward, #back {
     color: grey;
+    pointer-events: none;
 }
 #path {
     position: fixed;

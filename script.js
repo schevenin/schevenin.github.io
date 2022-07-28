@@ -47,7 +47,7 @@ var togglePages = function(button)
 	
 	// update the current page
 	current_page = new_page;
-	
+
 	// toggle the page
 	switch (current_page) {
 		case 'home':
@@ -106,14 +106,19 @@ var togglePages = function(button)
 	console.log("last_page: " + last_page);
 	console.log("next_page: " + next_page);
 	console.log("");
+
 	if (next_page.length == 0){
 		forward_button.style.color = 'grey';
+		forward_button.style.pointerEvents = 'none';
 	} else {
 		forward_button.style.color = '#20B2AA';
+		forward_button.style.pointerEvents = 'auto';
 	}
 	if (last_page.length == 0){
 		back_button.style.color = 'grey';
+		back_button.style.pointerEvents = 'none';
 	} else {
 		back_button.style.color = '#20B2AA';
+		back_button.style.pointerEvents = 'auto';
 	}
 };
