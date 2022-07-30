@@ -37,8 +37,8 @@ td {
     position: fixed;
     width: 100%;
     height: 58px;
-    background-color: #122;
-    border-bottom: 1px solid grey;
+    /*background-color: #122;
+    border-bottom: 1px solid grey;*/
 }
 
 /* NAVIGATION BUTTONS */
