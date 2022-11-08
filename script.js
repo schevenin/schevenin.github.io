@@ -10,16 +10,13 @@ const projects_container = document.getElementById('projects-container');
 const projects = 
 {
 	'magicleap': 
-		'a modeling app made for the magic leap headset built in C#',
+		'an atomic modeling and simulation app developed for the magic leap headset built in C#',
 	'homelab': 
-		'my all-in-one solution to NAS, and a remote development environment.',
-	'anagrams':
-		'easy solution to your difficult anagram!<br>\
-		<a href="https://github.com/schevenin/anagrams-solver/" target="_blank">github</a>',
-	//'ngrams': 
-	//	'a natural language processing tool that counts the frequency of n-grams in a text file',
+		'home server used primarily as NAS, a remote development environment, and a host to several docker containers',
+	'clipeasy':
+		'discord bot written in python that automates clipping youtube video highlights!',
 	//'add more': 
-	//	'projects to the page as simple as adding another entry!',
+	//	'projects to the page just like this!',
 };
 
 var current_page = 'home'

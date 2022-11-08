@@ -88,6 +88,11 @@ td {
 #info span {
     font-size: 2em;
 }
+#about {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
 #links td.data {
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -96,8 +101,6 @@ td {
 /* PROJECTS PAGE */
 #projects-page {
     display: none;
-    padding: 0;
-    margin: 0;
 }
 #projects-container {
     text-align: center;
@@ -119,6 +122,9 @@ td {
     #intro-page {
         text-align: center;
         width: 400px;
+    }
+    #about {
+        text-align: center;
     }
 }
 
